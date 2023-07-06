@@ -23,6 +23,7 @@
       width: 100vw;
       font-family: var(--using-font-chinese);
       background: linear-gradient(40deg, #ff8000 0%, #fd4c28 30%, #ff0c41 100%);
+      transition: all 1s ease-in-out !important;
     }
     h1, h2, p, li, .line-btn {
       color: var(--using-color-text);
@@ -53,7 +54,7 @@
       font-family: var(--using-font-english);
       border: none;
       padding: 8px 18px;
-      margin: 0 0 20px 0;
+      margin: 0 0 38px 0;
       border-radius: 5px;
       background-color: #00c300;
       color: #ffffff;
@@ -64,6 +65,39 @@
     }
     .line-btn:hover {
       background-color: #008200;
+    }
+    footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 10vh;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+    .BGcolor {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      margin: 0 5px 0 5px;
+    }
+    /* child 1~5 */
+    .BGcolor:nth-child(1) {
+      background: linear-gradient(40deg, #ff8000 0%, #fd4c28 30%, #ff0c41 100%);
+    }
+    .BGcolor:nth-child(2) {
+      background: linear-gradient(40deg, #bbff00 0%, #ff00dd 80%, #ff024a 100%);
+    }
+    .BGcolor:nth-child(3) {
+      background: linear-gradient(40deg, #333 0%, #333 40%, #404040 100%);
+    }
+    .BGcolor:nth-child(4) {
+      background: linear-gradient(40deg, #9e81ff 0%, #9aff91 50%, #f6ff97 100%);
+    }
+    .BGcolor:nth-child(5) {
+      background: linear-gradient(40deg, #1c0079 0%, #bf009f 50%, #b7ff00 100%);
     }
   </style>
 </head>
@@ -83,4 +117,36 @@
   </ul>
   <a href="https://line.me/ti/p/Uo2mDTiQIA" class="line-btn">加入LINE</a>
 </body>
+<footer>
+  <!-- 自選變更背景顏色 圓形按鈕 五個按鈕 並排  -->
+  <div class="BGcolor" onclick="changeBG(1)"></div>
+  <div class="BGcolor" onclick="changeBG(2)"></div>
+  <div class="BGcolor" onclick="changeBG(3)"></div>
+  <div class="BGcolor" onclick="changeBG(4)"></div>
+  <div class="BGcolor" onclick="changeBG(5)"></div>
+</footer>
+<script>
+  function changeBG(n) {
+    var bg = document.body.style;
+    switch(n) {
+      case 1:
+        bg.background = "linear-gradient(40deg, #ff8000 0%, #fd4c28 30%, #ff0c41 100%)";
+        break;
+      case 2:
+        bg.background = "linear-gradient(40deg, #bbff00 0%, #ff00dd 80%, #ff024a 100%)";
+        break;
+      case 3:
+        bg.background = "linear-gradient(40deg, #333 0%, #333 40%, #404040 100%)";
+        break;
+      case 4:
+        bg.background = "linear-gradient(40deg, #9e81ff 0%, #9aff91 50%, #f6ff97 100%)";
+        break;
+      case 5:
+        bg.background = "linear-gradient(40deg, #1c0079 0%, #bf009f 50%, #b7ff00 100%)";
+        break;
+      default:
+        bg.background = "linear-gradient(40deg, #ff8000 0%, #fd4c28 30%, #ff0c41 100%)";
+    }
+  }
+</script>
 </html>
