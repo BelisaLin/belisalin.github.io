@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,12 @@
       --using-font-english: 'Roboto', sans-serif;
       --using-color-text: #ffffff;
     }
+
+    html {
+      scroll-behavior: smooth;
+      transition: all 1s ease-in-out;
+    }
+
     body {
       display: flex;
       flex-direction: column;
@@ -22,34 +29,46 @@
       height: 100vh;
       width: 100vw;
       font-family: var(--using-font-chinese);
+      transition: all 1s ease-in-out;
+      background: #3a9535;
       background: linear-gradient(40deg, #ff8000 0%, #fd4c28 30%, #ff0c41 100%);
-      transition: all 1s ease-in-out !important;
     }
-    h1, h2, p, li, .line-btn {
+
+    h1,
+    h2,
+    p,
+    li,
+    .line-btn {
       color: var(--using-color-text);
       text-align: center;
     }
+
     p {
       margin: 2px 0 2px 0;
       font-size: 1.3em;
     }
+
     h1 {
       margin: 0 0 15px 0;
       font-size: 2.5em;
     }
+
     h2 {
       margin: 18px;
       font-size: 1.7em;
     }
+
     ul {
       padding: 0;
       margin: 0 0 30px 0;
     }
+
     li {
       color: var(--using-color-text);
       list-style: none;
       font-size: 1.3em;
     }
+
     .line-btn {
       font-family: var(--using-font-english);
       border: none;
@@ -63,11 +82,14 @@
       cursor: pointer;
       transition: background-color 0.3s;
     }
+
     .line-btn:hover {
       background-color: #008200;
     }
+
     footer {
       display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
       width: 100vw;
@@ -76,6 +98,7 @@
       bottom: 0;
       left: 0;
     }
+
     .BGcolor {
       width: 20px;
       height: 20px;
@@ -83,24 +106,30 @@
       background-color: #ffffff;
       margin: 0 5px 0 5px;
     }
+
     /* child 1~5 */
     .BGcolor:nth-child(1) {
       background: linear-gradient(40deg, #ff8000 0%, #fd4c28 30%, #ff0c41 100%);
     }
+
     .BGcolor:nth-child(2) {
       background: linear-gradient(40deg, #bbff00 0%, #ff00dd 80%, #ff024a 100%);
     }
+
     .BGcolor:nth-child(3) {
       background: linear-gradient(40deg, #333 0%, #333 40%, #404040 100%);
     }
+
     .BGcolor:nth-child(4) {
       background: linear-gradient(40deg, #9e81ff 0%, #9aff91 50%, #f6ff97 100%);
     }
+
     .BGcolor:nth-child(5) {
       background: linear-gradient(40deg, #1c0079 0%, #bf009f 50%, #b7ff00 100%);
     }
   </style>
 </head>
+
 <body>
   <h1>林怡萱</h1>
   <h2>相關證照</h2>
@@ -128,25 +157,32 @@
 <script>
   function changeBG(n) {
     var bg = document.body.style;
-    switch(n) {
+    switch (n) {
       case 1:
+        bg.background = "#fd4c28";
         bg.background = "linear-gradient(40deg, #ff8000 0%, #fd4c28 30%, #ff0c41 100%)";
         break;
       case 2:
+        bg.background = "#d415ff";
         bg.background = "linear-gradient(40deg, #bbff00 0%, #ff00dd 80%, #ff024a 100%)";
         break;
       case 3:
+        bg.background = "#333";
         bg.background = "linear-gradient(40deg, #333 0%, #333 40%, #404040 100%)";
         break;
       case 4:
+        bg.background = "#69ff7d";
         bg.background = "linear-gradient(40deg, #9e81ff 0%, #9aff91 50%, #f6ff97 100%)";
         break;
       case 5:
+        bg.background = "#00c300";
         bg.background = "linear-gradient(40deg, #1c0079 0%, #bf009f 50%, #b7ff00 100%)";
         break;
       default:
+        bg.background = "#ffd23e";
         bg.background = "linear-gradient(40deg, #ff8000 0%, #fd4c28 30%, #ff0c41 100%)";
     }
   }
 </script>
+
 </html>
